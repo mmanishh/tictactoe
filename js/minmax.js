@@ -1,8 +1,10 @@
+'use strict'
 var board = [0, 1, 2, 3, 4, 5, 6, 7, 8];
 var humanPlayer = "X";
 var aiPlayer = "O";
 var iter = 0;
 var round = 0;
+var delayMessage = 2000; // delay to show msg
 
 $(document).ready(function () {
     // adding <div class="item" id=${index}></div>
@@ -28,13 +30,13 @@ function move(element, player) {
             setTimeout(function () {
                 alert("You won , wow!");
                 reset();
-            }, 500);
+            }, delayMessage);
             return;
         } else if (round > 8) {
             setTimeout(function () {
                 alert("TIE. You cant beat me!");
                 reset();
-            }, 500);
+            }, delayMessage);
             return;
         } else {
             round++;
@@ -50,13 +52,13 @@ function move(element, player) {
                 setTimeout(function () {
                     alert("You lost!");
                     reset();
-                }, 1000);
+                }, delayMessage);
                 return;
             } else if (round === 0) {
                 setTimeout(function () {
                     alert("TIE. You cant beat me!");
                     reset();
-                }, 1000);
+                }, delayMessage);
                 return;
             }
         }

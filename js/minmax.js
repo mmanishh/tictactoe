@@ -12,13 +12,13 @@ $(document).ready(function () {
     });
 
     $(".item").click(function () {
-        move(this, humanPlayer, huCo);
+        move(this, humanPlayer);
     })
 });
 
 
 
-function move(element, player, color) {
+function move(element, player) {
     if (board[element.id] != humanPlayer && board[element.id] != aiPlayer) {
         round++;
         writeText(element, humanPlayer);

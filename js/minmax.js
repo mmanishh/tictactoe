@@ -4,7 +4,7 @@ var humanPlayer = "X";
 var aiPlayer = "O";
 var iter = 0;
 var round = 0;
-var delayMessage = 1500; // delay to show msg
+var delayMessage = 1000; // delay to show msg
 
 $(document).ready(function () {
     // adding <div class="item" id=${index}></div>
